@@ -1,0 +1,723 @@
+/* Fonts being used by the oba */
+@font-face {
+    font-family: AvenirRoman;
+    src: url(../fonts/Avenir-roman.ttf);
+}
+
+@font-face {
+    font-family: AvenirMedium;
+    src: url(../fonts/Avenir-medium.ttf);
+}
+
+@font-face {
+    font-family: AvenirBlack;
+    src: url(../fonts/Avenir\ -black.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Custom properties */
+
+:root{
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: /*#FF0000*/ #EB0000;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: /*#707070*/ #3a3b3c;
+
+    /* Border-radius */
+    --border-radius: 0.75rem;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+
+body{
+    min-height: calc(100vh - 4.5rem);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+    font-family: AvenirMedium;
+}
+
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+/* Skip to content link */
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 4.5rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    z-index: 100;
+  }
+  
+.skip-link:focus {
+    transform: translateY(0%);
+}
+
+
+/* Navigatie */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    height: 4.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    /* margin-bottom: 1.5rem; */
+    width: 100vw;
+    background-color: white;
+    z-index: 2;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    margin-left: 0.5rem;
+    height: 100%;
+    width: 3.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: var(--tran-03);
+}
+  
+/* The container <div> - needed to position the dropdown content */
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+} */
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    width: 100vw;
+    background-color: white;
+    height: calc(100vh - 4.5rem);
+    top: 4.5rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-size: 1rem;
+    z-index: 100;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    height: 3rem;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+  
+.dropdown-content .bx {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+  
+.search-nav {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.75rem 0.5rem;
+    height: 3rem;
+    background-color: var(--primary-color-light);
+    border-radius: var(--border-radius);
+}
+  
+.search-nav input {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family: AvenirMedium;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color-light);  
+}
+
+.person {
+    display: flex;
+    align-items: center;
+}
+  
+.person img {
+    margin-right: 1rem;
+    width: 3.5rem;
+    border-radius: 50%;
+}
+  
+.person-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.person-text p:nth-child(1) {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.mode {
+    display: flex;
+    position: relative;
+    margin: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    background-color: var(--primary-color-light);
+    transition: var(--tran-05);
+}
+
+.mode .sun-moon {
+    /* height: 50px; */
+    width: 2.25rem;
+}
+
+.mode .sun-moon i {
+    position: absolute;
+}
+
+.mode .sun-moon i.sun {
+    opacity: 0;
+}
+
+body.dark .mode .sun-moon i.sun {
+    opacity: 1;
+}
+
+body.dark .mode .sun-moon i.moon {
+    opacity: 0;
+}
+
+.bottom-content .toggle-switch {
+    /* position: absolute; */
+    right: 0;
+    margin-left: auto;
+    /* height: 100%; */
+    /* min-width: 60px; */
+    display: flex;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    /* cursor: pointer; */
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+    cursor: pointer;
+}
+
+input.switch {
+    appearance: none;
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+
+body.dark .switch::before {
+    left: 20px;
+} 
+
+/* Main */
+
+main {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.5rem;
+    /* max-width: 120rem; */
+}
+
+main .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    /* padding: 0 0 12px 1rem60px; */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 1.875rem;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/* Zoekbalk */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-bottom: 2rem;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius);
+    max-width: 15rem;
+    background: white;
+}
+
+form i {
+    margin-right: 1rem;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.search input {
+    max-width: 100%;
+    color: var(--text-color); 
+    font-size: 1rem;
+    font-family: AvenirMedium, sans serif;
+    outline: none;
+    border: none;
+}
+
+/* Filters */
+
+.buttons {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.buttons button {
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    font-family: AvenirMedium;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+/* Boekenlijst */
+
+.book {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.book img {
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+    width: 180px;
+    height: 285px;
+    transition: var(--tran-03); 
+}
+
+.book h2 {
+    margin-top: 1rem;
+}
+
+.book p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.book a:nth-child(4) { /* selecteert het 4de child van het article*/
+    padding: 0.5rem 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    box-shadow: 3px 3px 2px rgb(187, 187, 187);
+    transition: var(--tran-03);
+}
+
+/* Popups info & auteur */
+
+body:has(.overlay:target) main {
+    overflow: hidden;
+    height: calc(100vh - 4.5rem);
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.popup {
+  position: relative;
+  margin: 6em auto;
+  padding: 2em;
+  background: #fff;
+  border-radius: var(--border-radius);
+  width: 90%;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 200ms;
+}
+
+.book-recs {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.book-small {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    padding-right: 0.5rem;
+}
+
+.popup h2:nth-child(4) {
+    margin-top: 1rem;
+}
+
+.popup h2 {
+    margin-bottom: 1rem;
+}
+
+.book-small h3 {
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.book-small img {
+    width: 150px;
+}
+
+/* Recommendations */
+
+.recommendations {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 280px);
+    gap: 1rem;
+    text-align: center;
+}
+
+.rec-title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.rec-title h2 {
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+}
+
+.activity {
+    position: relative;
+    display: grid;
+    justify-items: center;
+}
+
+.activity img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    /* padding-right: 0.25rem;  */
+}
+
+.activity h3 {
+    position: absolute;
+    bottom: 0.25rem;
+    width: 100%;
+}
+
+.activity h3 a {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: white;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: 0.2s ease-in-out;
+}
+
+/* Hovers, Focus & Links*/
+
+.book a,
+.activity a:link,
+.book a,
+.activity a:visited {
+  text-decoration: none;
+}
+
+.buttons button:hover,
+.buttons button:focus {
+  background: white;
+  color: var(--text-color);
+}
+
+.book img:hover {
+    translate: 0 -0.5rem;
+}
+
+.book a:nth-child(1):hover {
+    background-color: transparent;
+}
+
+.book a p:hover {
+    text-decoration: underline;
+}
+
+.dropbtn:hover, 
+.dropbtn:focus,
+.dropdown-content a:hover,
+.dropdown-content a:focus,
+.activity h3 a:hover,
+.activity h3 a:focus,
+.book a:nth-child(4):hover,
+.book a:nth-child(4):focus {
+  background: var(--primary-color);
+  color: white;
+}
+
+.activity h3 a:active,
+.book a:nth-child(4):active {
+  background: green;
+  transition: 0s;
+}
+
+/* Dark mode */
+
+body.dark .skip-link {
+    background-color: #EB0000;
+    color:#fff;
+}
+
+body.dark nav {
+    background-color: var(--sidebar-color);
+}
+
+body.dark .dropdown-content {
+    background-color: var(--sidebar-color);
+}
+
+body.dark .dropbtn {
+    color: var(--text-color);
+}
+
+body.dark main .book a,
+body.dark main .activity h3 a,
+body.dark main .book img {
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+body.dark main .buttons button {
+  background: #EB0000;
+}
+
+body.dark main .buttons button:hover,
+body.dark main .buttons button:focus {
+  background: white;
+  color: var(--primary-color);
+}
+
+body.dark main .close {
+    color: #EB0000;
+}
+
+body.dark main .activity h3 a:hover,
+body.dark main .activity h3 a:focus,
+body.dark main .book a:nth-child(4):hover,
+body.dark main .book a:nth-child(4):focus {
+  background: #EB0000;
+  color: white;
+}
+
+body.dark main .popup {
+    background: var(--sidebar-color);
+}
+
+body.dark main .overlay {
+    background: rgb(255 255 255 / 42%);
+}
+
+/* Media queries */
+
+@media (min-width: 39rem){
+    .book-recs {
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 47rem) {
+    .person-text p:nth-child(1) {
+        font-size: 1.125rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+
+    main .text {
+        text-align: start;
+    }
+
+    h1 {
+        text-align: start;
+    }
+
+    .search-container {
+        justify-content: start;
+    }
+
+    .buttons {
+        text-align: start;
+    }
+
+    .popup {
+        width: 60%;
+    }
+
+    .book-recs {
+        overflow-x: hidden;
+    }
+
+    .book {
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        justify-content: space-between;
+        text-align: start;
+        margin: 0 3rem 2rem 0;
+    }
+
+    .book-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .recommendations {
+        justify-content: start;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .rec-title {
+        display: flex;
+        align-items: center;
+        text-align: start;
+    }
+
+    .rec-title img {
+        margin: 0 4rem 0 4rem;
+    }
+
+    .activity {
+        margin: 1rem;
+    }
+
+    .dropdown-content {
+        width: 16rem;
+        overflow: auto;
+      }
+
+      .bottom-content {
+        width: 100%;
+      }
+}
+
+@media (min-width: 75rem) {
+    .popup {
+        width: 40%;
+    }
+}
