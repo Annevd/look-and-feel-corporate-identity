@@ -357,10 +357,11 @@ form i {
     padding: 0.5rem 0.75rem;
     border: none;
     border-radius: var(--border-radius);
-    background: var(--primary-color);
+    background: white;
     font-family: AvenirMedium;
     font-size: 1rem;
-    color: white;
+    color: var(--text-color);
+    box-shadow:  3px 3px 2px rgb(187, 187, 187);
     cursor: pointer;
     transition: var(--tran-03);
 }
@@ -536,11 +537,11 @@ body:has(.overlay:target) main {
   text-decoration: none;
 }
 
-.buttons button:hover,
+/* .buttons button:hover,
 .buttons button:focus {
   background: white;
   color: var(--text-color);
-}
+} */
 
 .book img:hover {
     translate: 0 -0.5rem;
@@ -558,6 +559,8 @@ body:has(.overlay:target) main {
 .dropbtn:focus,
 .dropdown-content a:hover,
 .dropdown-content a:focus,
+.buttons button:hover,
+.buttons button:focus,
 .activity h3 a:hover,
 .activity h3 a:focus,
 .book a:nth-child(4):hover,
