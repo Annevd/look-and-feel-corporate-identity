@@ -16,32 +16,32 @@
     
     <title>Mijn OBA</title> 
 </head>
+
 <body>
-    
     <header>
         <a class="skip-link" href='#main'>Direct naar content</a>
         <nav>
-            <!-- <div class="dropdown"> -->
-                <button onclick="myFunction()" class='dropbtn bx bx-menu' aria-label="navigation"></button>
+            <button onclick="myFunction()" class='dropbtn bx bx-menu' aria-label="navigation"></button>
                 <div id="myDropdown" class="dropdown-content">
 
                     <div>
-                    <form class="search-nav">
-                        <i class='bx bx-search icon'></i>
-                        <input type="text" placeholder="Zoek...">
-                    </form>
+                        <form class="search-nav">
+                            <i class='bx bx-search icon'></i>
+                            <input type="text" placeholder="Zoek...">
+                        </form>
 
-                    <a href="https://yujing-student.github.io/all-human-accessible-website/"><i class='bx bx-home'></i>Welkom</a>
-                    <a href="https://pommelienn.github.io/the-client-website/"><i class='bx bx-user'></i>Overzicht abonnementen</a>
-                    <a href="leeslijst.html"><i class='bx bx-list-ul'></i>Leeslijst</a>
-                    <a href="https://wingsvn.github.io/the-client-website/uitleningen.html"><i class='bx bx-bar-chart-alt-2'></i>Uitleningen en verlengen</a>
-                    <a href="index.html"><i class='bx bx-bell'></i>Uitleengeschiedenis</a>
-                    <a href="#"><i class='bx bx-pie-chart-alt'></i>Betaalgeschiedenis</a>
-                    <a href="#"><i class='bx bx-heart'></i>Reserveringen</a>
-                    <a href="https://lisagjh.github.io/all-human-accessible-website"><i class= 'bx bx-bookmark'></i>Diensten en producten</a>
-                    <a href="#"><i class='bx bx-wallet'></i>Desposito's</a>
-                    <a href="#"><i class='bx bx-wallet'></i>Tellerstand abonnementen</a>
+                        <a href="https://yujing-student.github.io/all-human-accessible-website/"><i class='bx bx-home'></i>Welkom</a>
+                        <a href="https://pommelienn.github.io/the-client-website/"><i class='bx bx-user'></i>Overzicht abonnementen</a>
+                        <a href="leeslijst.html"><i class='bx bx-list-ul'></i>Leeslijst</a>
+                        <a href="https://wingsvn.github.io/the-client-website/uitleningen.html"><i class='bx bx-bar-chart-alt-2'></i>Uitleningen en verlengen</a>
+                        <a href="index.html"><i class='bx bx-bell'></i>Uitleengeschiedenis</a>
+                        <a href="#"><i class='bx bx-pie-chart-alt'></i>Betaalgeschiedenis</a>
+                        <a href="#"><i class='bx bx-heart'></i>Reserveringen</a>
+                        <a href="https://lisagjh.github.io/all-human-accessible-website"><i class= 'bx bx-bookmark'></i>Diensten en producten</a>
+                        <a href="#"><i class='bx bx-wallet'></i>Desposito's</a>
+                        <a href="#"><i class='bx bx-wallet'></i>Tellerstand abonnementen</a>
                     </div>
+
                     <div class="bottom-content">
                         <a href="#"><i class='bx bx-log-out'></i>Uitloggen</a>
                         <div class="mode">
@@ -56,8 +56,8 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
-            <!-- </div> -->
 
             <div class="person">
                 <div class="person-text">
@@ -68,60 +68,90 @@
             </div>
         </nav>
     </header>
+</body>
 
-    <main id="main">
+<main id="main">
 
-        <div class="text"><img src="./images/oba_20.png" alt=""></div>
+    <div class="logo"><img src="./images/oba_20.png" alt=""></div>
+        
+    <h1>Leeslijst</h1>
 
-        <h1>Leeslijst</h1>
+    <!-- Zoekbalk -->
 
+    <div class="search-container"> <!-- om zoekbalk en sorteermenu te positioneren -->
         <form class="search">
-            <input type="text" placeholder="Zoek..." name="search">
             <i class="bx bx-search"></i>
+            <input type="text" placeholder="Zoek..." name="search">
         </form>
 
-        <div class="book-list">
-            <article class="book">
-                <a href="https://zoeken.oba.nl/detail/Michel-Faber/The-book-of-strange-new-things/Boek/?itemid=%7Coba-catalogus%7C1126633"><img src="./images/books/boek1.jpg" alt="Uitleenpagina"></a>
-                <h2>The book of strange new things</h2>
-                <a href="#popup1-auteur"><p>Michel Faber</p></a>
-                <a href="#popup1-info">Info</a>
-            </article>
+        <form class="sort">
+            <label for="sort">Sorteer op</label>
+            <select name="sort" id="sort">
+            <option value="popular">Populariteit</option>
+            <option value="new-old">Nieuw/oud</option>
+            <option value="old-new">Oud/nieuw</option>
+            <option value="a-z">A-Z</option>
+            <option value="z-a">Z-A</option>
+            </select>
+        </form>
+    </div>
 
-            <article class="book">
-                <a href="https://zoeken.oba.nl/detail/Paul-Beatty/The-sellout/Boek/?itemid=%7Coba-catalogus%7C1160751"><img src="./images/books/boek2.png" alt="Uitleenpagina"></a>
-                <h2>The sellout</h2>
-                <a href="#popup2-auteur"><p>Paul Beatty</p></a>
-                <a href="#popup2-info">Info</a>
-            </article>
+    <div class="list-container"> <!-- Om de lijst functies te positioneren -->
+        <form class="list">
+            <label for="list">Mijn lijsten</label>
+            <select name="list" id="list">
+            <option value="list-1">Lijst 1</option>
+            <option value="list-2">Lijst 2</option>
+            <option value="list-3">Lijst 3</option>
+            <option value="list-4">Lijst 4</option>
+            </select>
+        </form>
 
-            <article class="book">
-                <a href="https://zoeken.oba.nl/detail/Manon-Uphoff/Vallen-is-als-vliegen/Boek/?itemid=%7Coba-catalogus%7C1213697"><img src="./images/books/boek3.jpg" alt="Uitleenpagina"></a>
-                <h2>Vallen is als vliegen</h2>
-                <a href="#popup3-auteur"><p>Manon Uphoff</p></a>
-                <a href="#popup3-info">Info</a>
-            </article>
+        <button>
+            <i class='bx bx-plus'></i>
+            <p>Nieuwe Lijst</p>
+        </button>
 
-            <article class="book">
-                <a href="https://zoeken.oba.nl/detail/Marieke-Lucas-Rijneveld/De-avond-is-ongemak-roman/Boek/?itemid=%7Coba-catalogus%7C1233837"><img src="./images/books/boek4.jpg" alt="Uitleenpagina"></a>
-                <h2>De avond is ongemak</h2>
-                <a href="#popup4-auteur"><p>Marieke Lucas Rijneveld</p></a>
-                <a href="#popup4-info">Info</a>
-            </article>
+     </div>
 
-            <article class="book">
-                <a href="https://zoeken.oba.nl/detail/Jan-Siebelink/Knielen-op-een-bed-violen-roman/Boek/?itemid=%7Coba-catalogus%7C930526"><img src="./images/books/boek5.jpg" alt="Uitleenpagina"></a>
-                <h2>Knielen op een bed violen</h2>
-                <a href="#popup5-auteur"><p>Jan Siebelink</p></a>
-                <a href="#popup5-info">Info</a>
-            </article>
+    <!-- Boekenlijst -->
 
-            <article class="book">
-                <a href="https://zoeken.oba.nl/detail/Tommy-Wieringa/De-heilige-Rita-roman/Boek/?itemid=%7Coba-catalogus%7C1176160"><img src="./images/books/boek6.jpg" alt="Uitleenpagina"></a>
-                <h2>De heilige Rita</h2>
-                <a href="#popup6-auteur"><p>Tommy Wieringa</p></a>
-                <a href="#popup6-info">Info</a>
-            </article>
-        </div>
+    <section class="book-list">
+        <article class="book">
+            <a href="https://zoeken.oba.nl/detail/Michel-Faber/The-book-of-strange-new-things/Boek/?itemid=%7Coba-catalogus%7C1126633"><img src="./images/books/boek1.jpg" alt="Uitleenpagina"></a>
+            <h2>The book of strange new things</h2>
+            <a href="#popup1-auteur"><p>Michel Faber</p></a>
+        </article>
 
-    </main>
+        <article class="book">
+            <a href="https://zoeken.oba.nl/detail/Paul-Beatty/The-sellout/Boek/?itemid=%7Coba-catalogus%7C1160751"><img src="./images/books/boek2.png" alt="Uitleenpagina"></a>
+            <h2>The sellout</h2>
+            <a href="#popup2-auteur"><p>Paul Beatty</p></a>
+        </article>
+
+        <article class="book">
+            <a href="https://zoeken.oba.nl/detail/Manon-Uphoff/Vallen-is-als-vliegen/Boek/?itemid=%7Coba-catalogus%7C1213697"><img src="./images/books/boek3.jpg" alt="Uitleenpagina"></a>
+            <h2>Vallen is als vliegen</h2>
+            <a href="#popup3-auteur"><p>Manon Uphoff</p></a>
+        </article>
+
+        <article class="book">
+            <a href="https://zoeken.oba.nl/detail/Marieke-Lucas-Rijneveld/De-avond-is-ongemak-roman/Boek/?itemid=%7Coba-catalogus%7C1233837"><img src="./images/books/boek4.jpg" alt="Uitleenpagina"></a>
+            <h2>De avond is ongemak</h2>
+            <a href="#popup4-auteur"><p>Marieke Lucas Rijneveld</p></a>
+        </article>
+
+        <article class="book">
+            <a href="https://zoeken.oba.nl/detail/Jan-Siebelink/Knielen-op-een-bed-violen-roman/Boek/?itemid=%7Coba-catalogus%7C930526"><img src="./images/books/boek5.jpg" alt="Uitleenpagina"></a>
+            <h2>Knielen op een bed violen</h2>
+            <a href="#popup5-auteur"><p>Jan Siebelink</p></a>
+        </article>
+
+        <article class="book">
+            <a href="https://zoeken.oba.nl/detail/Tommy-Wieringa/De-heilige-Rita-roman/Boek/?itemid=%7Coba-catalogus%7C1176160"><img src="./images/books/boek6.jpg" alt="Uitleenpagina"></a>
+            <h2>De heilige Rita</h2>
+            <a href="#popup6-auteur"><p>Tommy Wieringa</p></a>
+        </article>
+    </section>
+
+</main>

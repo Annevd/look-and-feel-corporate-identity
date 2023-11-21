@@ -60,7 +60,7 @@ body.dark {
 body {
     /* min-height: calc(100vh - 4.5rem); */
     background-color: var(--body-color);
-    font-family: AvenirMedium;
+    font-family: AvenirMedium, Arial;
 }
 
 /* Maakt de selectie achtergrond rood en de tekst wit */
@@ -173,7 +173,7 @@ nav {
   
 .search-nav input {
     font-size: 1rem;
-    font-family: AvenirMedium;
+    font-family: AvenirMedium, Arial;
     outline: none;
     border: none;
     background-color: var(--primary-color-light);  
@@ -302,13 +302,15 @@ h1 {
 .search-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .search {
-    margin-bottom: 2rem;
     /* text-align: center; */
     display: flex;
     align-items: center;
+    margin: auto;
+    margin-bottom: 2rem;
     padding: var(--padding-01);
     border-radius: var(--border-radius);
     background: white;
@@ -324,9 +326,54 @@ h1 {
     /* max-width: 100%; */
     color: var(--text-color); 
     font-size: 1rem;
-    font-family: AvenirMedium, sans serif;
+    font-family: AvenirMedium, Arial;
     outline: none;
     border: none;
+}
+
+/* Sorteermenu & Leeslijstfuncties */
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-container button {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.list-container button i {
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+form.sort,
+form.list {
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.list-container button,
+.sort select,
+.list select {
+    padding: var(--padding-01);
+    border-radius: var(--border-radius);
+    border: none;
+    font-family: AvenirMedium, Arial;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: white;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-01);
+    transition: var(--tran-03);
+}
+
+.sort label,
+.list label {
+    margin-right: 1rem;
 }
 
 /* Filters */
@@ -342,7 +389,7 @@ h1 {
     border: none;
     border-radius: var(--border-radius);
     background: white;
-    font-family: AvenirMedium;
+    font-family: AvenirMedium, Arial;
     font-size: 1rem;
     color: var(--text-color);
     box-shadow:  3px 3px 2px rgb(187, 187, 187);
@@ -538,6 +585,11 @@ body:has(.overlay:target) main {
 
 /* Hovers, Focus & Links*/
 
+.sort select:focus,
+.list select:focus {
+    outline: auto;
+}
+
 .book img:hover {
     translate: 0 -0.5rem;
 }
@@ -569,6 +621,8 @@ body:has(.overlay:target) main {
 .dropdown-content a:focus,
 .filters button:hover,
 .filters button:focus,
+.list-container button:hover,
+.list-container button:focus,
 .activity h3 a:hover,
 .activity h3 a:focus,
 .book a:nth-child(4):hover,
@@ -594,6 +648,9 @@ body.dark .search-nav i {
 
 body.dark .search i,
 body.dark .filters button,
+body.dark .list-container button,
+body.dark .sort select,
+body.dark .list select,
 body.dark .book a,
 body.dark .activity h3 a,
 body.dark .book img {
@@ -608,6 +665,8 @@ body.dark main .close {
 body.dark .skip-link,
 body.dark .filters button:hover,
 body.dark .filters button:focus,
+body.dark .list-container button:hover,
+body.dark .list-container button:focus,
 body.dark .activity h3 a:hover,
 body.dark .activity h3 a:focus,
 body.dark .book a:nth-child(4):hover,
@@ -647,7 +706,31 @@ body.dark .overlay {
     }
 
     .search-container {
-        justify-content: start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .search {
+        margin: 0;
+        margin-bottom: 2rem;
+        max-width: 15rem;
+    }
+
+    form.sort,
+    form.list,
+    .list-container button {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .list-container {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    form.list {
+        margin-right: 1rem;
     }
 
     .filters {
