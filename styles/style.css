@@ -37,6 +37,9 @@
     /* Padding */
     --padding-01: 0.5rem 0.75rem;
 
+    /* Box-shadow */
+    --box-shadow-01: 3px 3px 2px rgb(187, 187, 187);
+
     /* Transition */
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
@@ -375,7 +378,7 @@ h1 {
     background: white;
     border-radius: var(--border-radius);
     color: var(--text-color);
-    box-shadow: 3px 3px 2px rgb(187, 187, 187);
+    box-shadow: var(--box-shadow-01);
     transition: var(--tran-03);
 }
 
@@ -448,11 +451,38 @@ body:has(.overlay:target) main {
 .book-small h3 {
     padding-left: 1rem;
     font-size: 1.2rem;
-    margin: 0;
 }
 
 .book-small img {
     width: 150px;
+}
+
+/* Leeslijstknop popup */
+.popup button {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem auto;
+    padding: 0.25rem 0.5rem;
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--body-color);
+    font-family: AvenirMedium, Arial;
+    font-size: 1rem;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-01);
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+.popup button i {
+    margin-right: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.popup button p:first-of-type {
+    margin-right: 0.5rem;
 }
 
 /* Recommendations */
@@ -542,7 +572,9 @@ body:has(.overlay:target) main {
 .activity h3 a:hover,
 .activity h3 a:focus,
 .book a:nth-child(4):hover,
-.book a:nth-child(4):focus {
+.book a:nth-child(4):focus,
+.popup button:hover,
+.popup button:focus {
   background: var(--primary-color);
   color: white;
 }
