@@ -682,6 +682,11 @@ body:has(.overlay:target) main {
 
 /* Dark mode */
 
+/* body.dark .popup button {
+    background: white;
+    color: var(--text-color);
+} */
+
 body.dark nav,
 body.dark .dropdown-content,
 body.dark .popup {
@@ -705,8 +710,9 @@ body.dark .book img {
   box-shadow: none;
 }
 
-body.dark main .close {
-    color: #EB0000;
+body.dark .close,
+body.dark .bxs-trash {
+    color: var(--primary-color);
 }
 
 body.dark .skip-link,
@@ -718,7 +724,7 @@ body.dark .activity h3 a:hover,
 body.dark .activity h3 a:focus,
 body.dark .book a:nth-child(4):hover,
 body.dark .book a:nth-child(4):focus {
-  background: #EB0000;
+  background: var(--primary-color);
   color: white;
 }
 
