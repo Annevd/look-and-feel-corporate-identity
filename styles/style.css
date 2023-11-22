@@ -432,7 +432,7 @@ form.list {
 /* Add & Delete button */
 .list-btn {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
 }
 
@@ -440,7 +440,6 @@ form.list {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 3rem;
     padding: 0.5rem;
     border-radius: var(--border-radius);
     border: none;
@@ -448,6 +447,7 @@ form.list {
 }
 
 .list-btn button:first-of-type {
+    margin-right: 2rem;
     background: white;
     color: var(--text-color);
     box-shadow: var(--box-shadow-01);
@@ -778,6 +778,15 @@ body.dark .overlay {
 
     form.list {
         margin-right: 1rem;
+    }
+
+    .list-btn {
+        justify-content: space-between;
+        margin-right: 3rem;
+    }
+
+    .list-btn button:first-of-type {
+        margin:0;
     }
 
     .filters {
