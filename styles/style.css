@@ -429,6 +429,46 @@ form.list {
     transition: var(--tran-03);
 }
 
+/* Add & Delete button */
+.list-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.list-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+}
+
+.list-btn button:first-of-type {
+    background: white;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-01);
+}
+
+.list-btn button:nth-of-type(2) {
+    background: transparent;
+}
+
+.list-btn i {
+    font-size: 2rem;
+}
+
+.bx-list-plus {
+    color: var(--text-color);
+}
+
+.bxs-trash {
+    color: var(--primary-color);
+}
+
 /* Popups info & auteur */
 
 /* Zorgt ervoor dat je niet kan scrollen terwijl je in de popup zit */
@@ -547,8 +587,10 @@ body:has(.overlay:target) main {
 .recommendations {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, 280px);
-    gap: 1rem;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    /* height: 300px; */
+    /* gap: 1rem; */
     text-align: center;
 }
 
@@ -556,12 +598,17 @@ body:has(.overlay:target) main {
     position: relative;
 }
 
-.activity img {
+.recommendations img {
     display: block;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     object-fit: cover;
     border-radius: var(--border-radius);
+}
+
+.recommendations img:first-of-type,
+.recommendations img:nth-of-type(3) {
+    height: 80%;
 }
 
 .activity h3 {
@@ -763,8 +810,8 @@ body.dark .overlay {
     }
 
     .recommendations {
-        justify-content: start;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* justify-content: start;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
     }
 
     .rec-title {
