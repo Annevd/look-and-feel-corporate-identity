@@ -126,11 +126,11 @@ nav {
     min-width: 160px;
     width: 100vw;
     background-color: white;
-    height: calc(100vh - 4.5rem);
+    height: calc(100dvh - 4.5rem);
     top: 4.5rem;
     overflow: scroll;
     overflow-x: hidden;
-    z-index: 100;
+    z-index: 1000;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
@@ -444,6 +444,7 @@ form.list {
     border-radius: var(--border-radius);
     border: none;
     cursor: pointer;
+    transition: var(--tran-03);
 }
 
 .list-btn button:first-of-type {
@@ -455,18 +456,11 @@ form.list {
 
 .list-btn button:nth-of-type(2) {
     background: transparent;
+    color: var(--primary-color);
 }
 
 .list-btn i {
     font-size: 2rem;
-}
-
-.bx-list-plus {
-    color: var(--text-color);
-}
-
-.bxs-trash {
-    color: var(--primary-color);
 }
 
 /* Popups info & auteur */
@@ -474,7 +468,7 @@ form.list {
 /* Zorgt ervoor dat je niet kan scrollen terwijl je in de popup zit */
 body:has(.overlay:target) main {
     overflow: hidden;
-    height: calc(100vh - 4.5rem);
+    height: calc(100dvh - 4.5rem);
 }
 
 .overlay {
@@ -575,7 +569,7 @@ body:has(.overlay:target) main {
 /* Recommendations */
 
 .rec-title {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     text-align: center;
 }
 
@@ -584,31 +578,54 @@ body:has(.overlay:target) main {
     font-size: 1.875rem;
 }
 
-.recommendations {
+.recommendations { 
     display: grid;
-    justify-content: center;
-    align-items: center;
     grid-template-columns: repeat(8, 1fr);
-    /* height: 300px; */
-    /* gap: 1rem; */
+    align-items: center;
+    justify-content: center;
     text-align: center;
+}
+
+.recommendations h3:first-child {
+    grid-column: 2/8;
+    grid-row: 1;
+    margin-bottom: 1rem;
+    text-align: center; 
 }
 
 .activity {
     position: relative;
+    margin: 0 1rem;
+    /* display: grid;
+    justify-items: center; */
 }
 
 .recommendations img {
     display: block;
-    /* width: 100%; */
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: var(--border-radius);
 }
 
-.recommendations img:first-of-type,
-.recommendations img:nth-of-type(3) {
+.activity:first-of-type {
+    grid-column: 1/5;
+    grid-row: 2;
     height: 80%;
+    filter: blur(3px);
+}
+
+.activity:nth-of-type(2) {
+    grid-column: 2/8;
+    grid-row: 2;
+    z-index: 1;
+}
+
+.activity:nth-of-type(3) {
+    grid-column: 5/9;
+    grid-row: 2;
+    height: 80%;
+    filter: blur(3px);
 }
 
 .activity h3 {
@@ -628,6 +645,22 @@ body:has(.overlay:target) main {
     white-space: nowrap;
     text-overflow: ellipsis;
     transition: 0.2s ease-in-out;
+}
+
+.recommendations button {
+    grid-row: 3;
+    grid-column: 4/6;
+    margin: 2rem auto;
+    padding: var(--padding-01);
+    border-radius: var(--border-radius);
+    border: none;
+    font-family: AvenirMedium, Arial;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: white;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-01);
+    transition: var(--tran-03);
 }
 
 /* Hovers, Focus & Links*/
@@ -670,8 +703,12 @@ body:has(.overlay:target) main {
 .filters button:focus,
 .list-container button:hover,
 .list-container button:focus,
+.list-btn button:first-of-type:hover,
+.list-btn button:first-of-type:focus,
 .activity h3 a:hover,
 .activity h3 a:focus,
+.recommendations button:hover,
+.recommendations button:focus,
 .book a:nth-child(4):hover,
 .book a:nth-child(4):focus,
 .popup button:hover,
@@ -682,10 +719,11 @@ body:has(.overlay:target) main {
 
 /* Dark mode */
 
-/* body.dark .popup button {
+body.dark .popup button {
     background: white;
-    color: var(--text-color);
-} */
+    color: var(--primary-color);
+    box-shadow: none;
+}
 
 body.dark nav,
 body.dark .dropdown-content,
@@ -703,8 +741,10 @@ body.dark .filters button,
 body.dark .list-container button,
 body.dark .sort select,
 body.dark .list select,
+body.dark .list-btn button:first-of-type,
 body.dark .book a,
 body.dark .activity h3 a,
+body.dark .recommendations button,
 body.dark .book img {
   color: var(--primary-color);
   box-shadow: none;
@@ -712,19 +752,25 @@ body.dark .book img {
 
 body.dark .close,
 body.dark .bxs-trash {
-    color: var(--primary-color);
+    color: #EB0000;
 }
 
 body.dark .skip-link,
 body.dark .filters button:hover,
 body.dark .filters button:focus,
-body.dark .list-container button:hover,
-body.dark .list-container button:focus,
+body.dark .popup button:hover,
+body.dark .popup button:focus,
+body.dark .list-container button:hover, /* Van leeslijst pagina */
+body.dark .list-container button:focus, /* Van leeslijst pagina */
+body.dark .list-btn button:first-of-type:hover, /* Van leeslijst pagina */
+body.dark .list-btn button:first-of-type:focus, /* Van leeslijst pagina */
 body.dark .activity h3 a:hover,
 body.dark .activity h3 a:focus,
+body.dark .recommendations button:hover,
+body.dark .recommendations button:focus,
 body.dark .book a:nth-child(4):hover,
 body.dark .book a:nth-child(4):focus {
-  background: var(--primary-color);
+  background: #EB0000;
   color: white;
 }
 
@@ -733,6 +779,24 @@ body.dark .overlay {
 }
 
 /* Media queries */
+
+@media (min-width: 30rem){ /* media-query voor aanbevolen activiteiten klein scherm */
+    .activity {
+        margin: 0;
+    }
+
+    .activity:first-of-type {
+        grid-column: 2/5;
+    }
+
+    .activity:nth-of-type(2) {
+        grid-column: 3/7;
+    }
+
+    .activity:nth-of-type(3) {
+        grid-column: 5/8;
+    }
+}
 
 @media (min-width: 39rem){
     .book-recs {
@@ -772,26 +836,26 @@ body.dark .overlay {
 
     form.sort,
     form.list,
-    .list-container button {
+    .list-container button { /* Van leeslijst pagina */
         margin: 0;
         margin-bottom: 2rem;
     }
 
-    .list-container {
+    .list-container { /* Van leeslijst pagina */
         flex-direction: row;
         justify-content: flex-start;
     }
 
-    form.list {
+    form.list { /* Van leeslijst pagina */
         margin-right: 1rem;
     }
 
-    .list-btn {
+    .list-btn { /* Van leeslijst pagina */
         justify-content: space-between;
         margin-right: 3rem;
     }
 
-    .list-btn button:first-of-type {
+    .list-btn button:first-of-type {  /* Van leeslijst pagina */
         margin:0;
     }
 
@@ -824,11 +888,6 @@ body.dark .overlay {
         gap: 1rem;
     }
 
-    .recommendations {
-        /* justify-content: start;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
-    }
-
     .rec-title {
         display: flex;
         align-items: center;
@@ -839,10 +898,6 @@ body.dark .overlay {
         margin: 0 4rem 0 4rem;
     }
 
-    .activity {
-        margin: 1rem;
-    }
-
     .dropdown-content {
         width: 16rem;
         overflow: auto;
@@ -851,6 +906,36 @@ body.dark .overlay {
       .bottom-content {
         width: 100%;
       }
+}
+
+@media (min-width: 65rem){ /* media-query voor aanbevolen activiteiten groot scherm */
+    .recommendations {
+        grid-template-columns: repeat(14, 1fr);
+        margin-bottom: 2rem;
+    }
+
+    .recommendations h3:first-child {
+        grid-column: 3/7;
+        text-align: start;
+    }
+
+    .activity:first-of-type {
+        grid-column: 1/5;
+    }
+
+    .activity:nth-of-type(2) {
+        grid-column: 3/7;
+    }
+
+    .activity:nth-of-type(3) {
+        grid-column: 5/9;
+    }
+
+    .recommendations button {
+        grid-row: 2;
+        grid-column: 11/13;
+        margin: 0 2rem;
+    }
 }
 
 @media (min-width: 75rem) {
