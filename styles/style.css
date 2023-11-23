@@ -663,6 +663,29 @@ body:has(.overlay:target) main {
     transition: var(--tran-03);
 }
 
+/* Pagination */
+
+.page-container{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.page-container ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.page-container li {
+    margin: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius);
+}
+
+.page-container li:nth-of-type(2) {
+    background: white;
+}
+
 /* Hovers, Focus & Links*/
 
 .sort select:focus,
@@ -678,8 +701,10 @@ body:has(.overlay:target) main {
     background-color: transparent;
 }
 
-.book a p:hover {
+.book a p:hover,
+.page-container li:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .activity h3 a:active,
@@ -745,7 +770,8 @@ body.dark .list-btn button:first-of-type,
 body.dark .book a,
 body.dark .activity h3 a,
 body.dark .recommendations button,
-body.dark .book img {
+body.dark .book img,
+body.dark .page-container li:nth-of-type(2) {
   color: var(--primary-color);
   box-shadow: none;
 }
@@ -911,7 +937,7 @@ body.dark .overlay {
 @media (min-width: 65rem){ /* media-query voor aanbevolen activiteiten groot scherm */
     .recommendations {
         grid-template-columns: repeat(14, 1fr);
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 
     .recommendations h3:first-child {
