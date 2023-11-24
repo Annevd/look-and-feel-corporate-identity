@@ -31,11 +31,16 @@
     --toggle-color: #DDD;
     --text-color: /*#707070*/ #3a3b3c;
 
+    /* Font */
+    --font-size-standard: 1rem;
+
     /* Border-radius */
     --border-radius: 0.75rem;
 
-    /* Padding */
+    /* Box model */
     --padding-01: 0.5rem 0.75rem;
+    --white-space: 2rem;
+    --white-space-02: 1rem;
 
     /* Box-shadow */
     --box-shadow-01: 3px 3px 2px rgb(187, 187, 187);
@@ -156,7 +161,7 @@ nav {
 .dropdown-content .bx {
     display: flex;
     align-items: center;
-    margin-right: 1rem;
+    margin-right: var(--white-space-02);
     font-size: 1.25rem;
 }
   
@@ -172,7 +177,7 @@ nav {
 }
   
 .search-nav input {
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     font-family: AvenirMedium, Arial;
     outline: none;
     border: none;
@@ -186,7 +191,7 @@ nav {
 }
   
 .person img {
-    margin-right: 1rem;
+    margin-right: var(--white-space-02);
     width: 3.5rem;
     border-radius: 50%;
 }
@@ -196,12 +201,12 @@ nav {
     flex-direction: column;
     justify-content: center;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     margin: 0 1rem;
 }
 
 .person-text p:nth-child(1) {
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     font-weight: 600;
 }
 
@@ -287,13 +292,13 @@ main {
 }
 
 .logo {
-    margin-bottom: 1rem;
+    margin-bottom: var(--white-space-02);
     margin-top: 1.5rem;
     text-align: center;
 }
 
 h1 {
-    margin-bottom: 2rem;
+    margin-bottom: var(--white-space);
     font-size: 1.875rem;
     text-align: center;
     overflow-wrap: break-word;
@@ -312,14 +317,14 @@ h1 {
     display: flex;
     align-items: center;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: var(--white-space);
     padding: var(--padding-01);
     border-radius: var(--border-radius);
     background: white;
 }
 
 .search i {
-    margin-right: 1rem;
+    margin-right: var(--white-space-02);
     color: var(--text-color);
     font-size: 1.2rem;
 }
@@ -327,7 +332,7 @@ h1 {
 .search input {
     /* max-width: 100%; */
     color: var(--text-color); 
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     font-family: AvenirMedium, Arial;
     outline: none;
     border: none;
@@ -344,7 +349,7 @@ h1 {
     display: flex;
     align-items: center;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: var(--white-space);
 }
 
 .list-container button i {
@@ -365,7 +370,7 @@ form.list {
     border-radius: var(--border-radius);
     border: none;
     font-family: AvenirMedium, Arial;
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     color: var(--text-color);
     background-color: white;
     cursor: pointer;
@@ -381,7 +386,7 @@ form.list {
 /* Filters */
 
 .filters {
-    margin-bottom: 2rem;
+    margin-bottom: var(--white-space);
     text-align: center;
 }
 
@@ -392,7 +397,7 @@ form.list {
     border-radius: var(--border-radius);
     background: white;
     font-family: AvenirMedium, Arial;
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     color: var(--text-color);
     box-shadow:  3px 3px 2px rgb(187, 187, 187);
     cursor: pointer;
@@ -403,7 +408,7 @@ form.list {
 
 .book {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: var(--white-space);
 }
 
 .book img {
@@ -414,7 +419,7 @@ form.list {
 }
 
 .book h2 {
-    margin-top: 1rem;
+    margin-top: var(--white-space-02);
 }
 
 .book p {
@@ -450,7 +455,7 @@ form.list {
 }
 
 .list-btn button:first-of-type {
-    margin-right: 2rem;
+    margin-right: var(--white-space);
     background: white;
     color: var(--text-color);
     box-shadow: var(--box-shadow-01);
@@ -524,11 +529,11 @@ body:has(.overlay:target) main {
 }
 
 .popup h2:nth-child(4) {
-    margin-top: 1rem;
+    margin-top: var(--white-space-02);
 }
 
 .popup h2 {
-    margin-bottom: 1rem;
+    margin-bottom: var(--white-space-02);
 }
 
 .book-small h3 {
@@ -551,7 +556,7 @@ body:has(.overlay:target) main {
     border: none;
     background-color: var(--body-color);
     font-family: AvenirMedium, Arial;
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     color: var(--text-color);
     box-shadow: var(--box-shadow-01);
     cursor: pointer;
@@ -576,7 +581,7 @@ body:has(.overlay:target) main {
 }
 
 .rec-title h2 {
-    margin-bottom: 1rem;
+    margin-bottom: var(--white-space-02);
     font-size: 1.875rem;
 }
 
@@ -591,7 +596,7 @@ body:has(.overlay:target) main {
 .recommendations h3:first-child {
     grid-column: 2/8;
     grid-row: 1;
-    margin-bottom: 1rem;
+    margin-bottom: var(--white-space-02);
     text-align: center; 
 }
 
@@ -657,7 +662,7 @@ body:has(.overlay:target) main {
     border-radius: var(--border-radius);
     border: none;
     font-family: AvenirMedium, Arial;
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     color: var(--text-color);
     background-color: white;
     cursor: pointer;
@@ -670,7 +675,7 @@ body:has(.overlay:target) main {
 .page-container{
     display:flex;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: var(--white-space);
 }
 
 .page-container ul {
@@ -679,7 +684,7 @@ body:has(.overlay:target) main {
 }
 
 .page-container li {
-    margin: 0.5rem;
+    margin: 0.25rem;
     padding: 0.25rem 0.75rem;
     border-radius: var(--border-radius);
 }
@@ -858,7 +863,7 @@ body.dark .overlay {
 
     .search {
         margin: 0;
-        margin-bottom: 2rem;
+        margin-bottom: var(--white-space);
         max-width: 15rem;
     }
 
@@ -866,7 +871,7 @@ body.dark .overlay {
     form.list,
     .list-container button { /* Van leeslijst pagina */
         margin: 0;
-        margin-bottom: 2rem;
+        margin-bottom: var(--white-space);
     }
 
     .list-container { /* Van leeslijst pagina */
@@ -875,7 +880,7 @@ body.dark .overlay {
     }
 
     form.list { /* Van leeslijst pagina */
-        margin-right: 1rem;
+        margin-right: var(--white-space-02);
     }
 
     .list-btn { /* Van leeslijst pagina */
@@ -912,7 +917,7 @@ body.dark .overlay {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         padding-left: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: var(--white-space);
         gap: 1rem;
     }
 
@@ -939,30 +944,29 @@ body.dark .overlay {
 @media (min-width: 65rem){ /* media-query voor aanbevolen activiteiten groot scherm */
     .recommendations {
         grid-template-columns: repeat(14, 1fr);
-        margin-bottom: 5rem;
+        margin-bottom: var(--white-space);
     }
 
     .recommendations h3:first-child {
-        grid-column: 3/7;
+        grid-column: 6/10;
         text-align: start;
     }
 
     .activity:first-of-type {
-        grid-column: 1/5;
+        grid-column: 4/8;
     }
 
     .activity:nth-of-type(2) {
-        grid-column: 3/7;
+        grid-column: 6/10;
     }
 
     .activity:nth-of-type(3) {
-        grid-column: 5/9;
+        grid-column: 8/12;
     }
 
     .recommendations button {
-        grid-row: 2;
-        grid-column: 11/13;
-        margin: 0 2rem;
+        grid-row: 3;
+        grid-column: 7/9;
     }
 }
 
