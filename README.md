@@ -17,7 +17,7 @@ Ontwerp en maak voor een opdrachtgever een component of website op basis van een
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-Voor deze opdracht moeten wij een website of component maken in d ehuisstijl van de opdrachtgever, in dit geval OBA. 
+Voor deze opdracht moeten wij een website of component maken in de huisstijl van de opdrachtgever, in dit geval OBA. 
 Samen met het OBA team van mijn squad hebben wij een [Living styleguide](https://yujing-student.github.io/look-and-feel-living-styleguide/) gemaakt met verschillende categorieën zoals forms, buttons, fonts en kleuren. Deze hebben wij gebasseerd op de bestaande OBA huisstijl, maar ook op een nieuwe huisstijl gebasseerd op het format van een van de tweedejaars. Ik heb mij met name gefocust op forms, kleur, fonts en het OBA logo.
 
 Op de pagina waar ik aan gewerkt heb, uitleengeschiedenis, kan je de boeken zien die je in het verleden hebt geleend en daaronder een uitgelichte aanbevolen activiteit van de OBA waar je op kan klikken om doorgeleid te worden naar de OBA informatiepagina van de desbetreffende activiteit. Ook kan je nu vanaf hier gelijk een boek toevoegen aan een leeslijst. 
