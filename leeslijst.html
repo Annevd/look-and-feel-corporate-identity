@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Link to CSS -->
     <link rel="stylesheet" href="./styles/style.css">
-    
+
     <!-- Link to boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Link to JavaScript script -->
     <script src="./scripts/script.js" defer></script>
-    
-    <title>Mijn OBA</title> 
+
+    <title>Mijn OBA</title>
 </head>
 
 <body>
     <header>
-        <a class="skip-link" href='#main'>Direct naar content</a>
+        <a class="skip-link" href="#main">Direct naar content</a>
         <nav>
             <button onclick="myFunction()" class='dropbtn bx bx-menu' aria-label="navigation"></button>
-                <div id="myDropdown" class="dropdown-content">
+            <div id="myDropdown" class="dropdown-content">
 
-                    <div>
-                        <form class="search-nav">
-                            <i class='bx bx-search icon'></i>
-                            <input type="text" placeholder="Zoek...">
-                        </form>
+                <div>
+                    <form class="search-nav">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Zoek...">
+                    </form>
 
-                        <a href="https://yujing-student.github.io/look-and-feel-corporate-identity/"><i class='bx bx-home'></i>Welkom</a>
-                        <a href="https://pommelienn.github.io/the-client-website/"><i class='bx bx-user'></i>Overzicht abonnementen</a>
-                        <a href="leeslijst.html"><i class='bx bx-list-ul'></i>Leeslijst</a>
-                        <a href="https://wingsvn.github.io/the-client-website/uitleningen.html"><i class='bx bx-bar-chart-alt-2'></i>Uitleningen en verlengen</a>
-                        <a href="index.html"><i class='bx bx-bell'></i>Uitleengeschiedenis</a>
-                        <a href="#"><i class='bx bx-pie-chart-alt'></i>Betaalgeschiedenis</a>
-                        <a href="#"><i class='bx bx-heart'></i>Reserveringen</a>
-                        <a href="https://lisagjh.github.io/all-human-accessible-website"><i class= 'bx bx-bookmark'></i>Diensten en producten</a>
-                        <a href="#"><i class='bx bx-wallet'></i>Desposito's</a>
-                        <a href="#"><i class='bx bx-wallet'></i>Tellerstand abonnementen</a>
-                    </div>
+                    <a href="https://yujing-student.github.io/look-and-feel-corporate-identity/"><i
+                            class='bx bx-home'></i>Welkom</a>
+                    <a href="https://pommelienn.github.io/the-client-website/"><i class='bx bx-user'></i>Overzicht
+                        abonnementen</a>
+                    <a href="leeslijst.html"><i class='bx bx-list-ul'></i>Leeslijst</a>
+                    <a href="https://wingsvn.github.io/the-client-website/uitleningen.html"><i
+                            class='bx bx-bar-chart-alt-2'></i>Uitleningen en verlengen</a>
+                    <a href="index.html"><i class='bx bx-bell'></i>Uitleengeschiedenis</a>
+                    <a href="#"><i class='bx bx-pie-chart-alt'></i>Betaalgeschiedenis</a>
+                    <a href="#"><i class='bx bx-heart'></i>Reserveringen</a>
+                    <a href="https://lisagjh.github.io/all-human-accessible-website"><i
+                            class='bx bx-bookmark'></i>Diensten en producten</a>
+                    <a href="#"><i class='bx bx-wallet'></i>Desposito's</a>
+                    <a href="#"><i class='bx bx-wallet'></i>Tellerstand abonnementen</a>
+                </div>
 
-                    <div class="bottom-content">
-                        <a href="#"><i class='bx bx-log-out'></i>Uitloggen</a>
-                        <div class="mode">
-                            <div class="sun-moon">
-                                <i class='bx bx-moon icon moon'></i>
-                                <i class='bx bx-sun icon sun'></i>
-                            </div>
-                            <p class="mode-text text">Dark mode</p>
-        
-                            <div class="toggle-switch" >
-                                <input type="checkbox" class="switch">
-                            </div>
+                <div class="bottom-content">
+                    <a href="#"><i class='bx bx-log-out'></i>Uitloggen</a>
+                    <div class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <p class="mode-text text">Dark mode</p>
+
+                        <div class="toggle-switch">
+                            <input type="checkbox" class="switch">
                         </div>
                     </div>
-
                 </div>
+
+            </div>
 
             <div class="person">
                 <div class="person-text">
@@ -73,7 +78,7 @@
 <main id="main">
 
     <div class="logo"><img src="./images/oba_20.png" alt=""></div>
-        
+
     <h1>Leeslijst</h1>
 
     <!-- Zoekbalk -->
@@ -87,11 +92,11 @@
         <form class="sort">
             <label for="sort">Sorteer op</label>
             <select name="sort" id="sort">
-            <option value="popular">Populariteit</option>
-            <option value="new-old">Nieuw/oud</option>
-            <option value="old-new">Oud/nieuw</option>
-            <option value="a-z">A-Z</option>
-            <option value="z-a">Z-A</option>
+                <option value="popular">Populariteit</option>
+                <option value="new-old">Nieuw/oud</option>
+                <option value="old-new">Oud/nieuw</option>
+                <option value="a-z">A-Z</option>
+                <option value="z-a">Z-A</option>
             </select>
         </form>
     </div>
@@ -100,10 +105,10 @@
         <form class="list">
             <label for="list">Mijn lijsten</label>
             <select name="list" id="list">
-            <option value="list-1">Lijst 1</option>
-            <option value="list-2">Lijst 2</option>
-            <option value="list-3">Lijst 3</option>
-            <option value="list-4">Lijst 4</option>
+                <option value="list-1">Lijst 1</option>
+                <option value="list-2">Lijst 2</option>
+                <option value="list-3">Lijst 3</option>
+                <option value="list-4">Lijst 4</option>
             </select>
         </form>
 
@@ -112,92 +117,113 @@
             <p>Nieuwe Lijst</p>
         </button>
 
-     </div>
+    </div>
 
     <!-- Boekenlijst -->
 
     <section class="book-list">
         <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Isabel-Allende/Violeta/Boek/?itemid=%7Coba-catalogus%7C1254553"><img src="./images/books/boek7.jpeg" alt="Uitleenpagina"></a>
+            <a href="https://zoeken.oba.nl/detail/Isabel-Allende/Violeta/Boek/?itemid=%7Coba-catalogus%7C1254553"><img
+                    src="./images/books/boek7.jpeg" alt="Uitleenpagina"></a>
             <h2>Violeta</h2>
-            <a href="#popup1-auteur"><p>Isabel Allende</p></a>
+            <a href="#popup1-auteur">
+                <p>Isabel Allende</p>
+            </a>
             <div class="list-btn">
-                <button>
-                    <i class='bx bx-list-plus' ></i>
-                  </button>
-                  <button>
-                    <i class='bx bxs-trash' ></i>
-                  </button>
+                <button class="add-list">
+                    <i class='bx bx-list-plus'></i>
+                </button>
+                <button class="delete-btn">
+                    <i class='bx bxs-trash'></i>
+                </button>
             </div>
         </article>
 
         <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Kelly-Weekers/De-kracht-van-keuze-de-vragen-die-ik-mijzelf/Boek/?itemid=%7Coba-catalogus%7C1256986"><img src="./images/books/boek8.jpg" alt="Uitleenpagina"></a>
+            <a
+                href="https://zoeken.oba.nl/detail/Kelly-Weekers/De-kracht-van-keuze-de-vragen-die-ik-mijzelf/Boek/?itemid=%7Coba-catalogus%7C1256986"><img
+                    src="./images/books/boek8.jpg" alt="Uitleenpagina"></a>
             <h2>De kracht van keuze</h2>
-            <a href="#popup2-auteur"><p>Kelly Weekers</p></a>
+            <a href="#popup2-auteur">
+                <p>Kelly Weekers</p>
+            </a>
             <div class="list-btn">
-                <button>
-                    <i class='bx bx-list-plus' ></i>
-                  </button>
-                  <button>
-                    <i class='bx bxs-trash' ></i>
-                  </button>
+                <button class="add-list">
+                    <i class='bx bx-list-plus'></i>
+                </button>
+                <button class="delete-btn">
+                    <i class='bx bxs-trash'></i>
+                </button>
             </div>
         </article>
 
         <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Stephen-King/Fairy-tale/Boek/?itemid=%7Coba-catalogus%7C1259739"><img src="./images/books/boek9.jpeg" alt="Uitleenpagina"></a>
+            <a href="https://zoeken.oba.nl/detail/Stephen-King/Fairy-tale/Boek/?itemid=%7Coba-catalogus%7C1259739"><img
+                    src="./images/books/boek9.jpeg" alt="Uitleenpagina"></a>
             <h2>Fairy tale</h2>
-            <a href="#popup3-auteur"><p>Stephen King</p></a>
+            <a href="#popup3-auteur">
+                <p>Stephen King</p>
+            </a>
             <div class="list-btn">
-                <button>
-                    <i class='bx bx-list-plus' ></i>
-                  </button>
-                  <button>
-                    <i class='bx bxs-trash' ></i>
-                  </button>
+                <button class="add-list">
+                    <i class='bx bx-list-plus'></i>
+                </button>
+                <button class="delete-btn">
+                    <i class='bx bxs-trash'></i>
+                </button>
             </div>
         </article>
 
         <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Raynor-Winn/Het-zoutpad-over-oude-wegen-naar-een-nieuw/Boek/?itemid=%7Coba-catalogus%7C1241638"><img src="./images/books/boek10.jpg" alt="Uitleenpagina"></a>
+            <a
+                href="https://zoeken.oba.nl/detail/Raynor-Winn/Het-zoutpad-over-oude-wegen-naar-een-nieuw/Boek/?itemid=%7Coba-catalogus%7C1241638"><img
+                    src="./images/books/boek10.jpg" alt="Uitleenpagina"></a>
             <h2>Het zoutpad</h2>
-            <a href="#popup4-auteur"><p>Raynor Winn</p></a>
+            <a href="#popup4-auteur">
+                <p>Raynor Winn</p>
+            </a>
             <div class="list-btn">
-                <button>
-                    <i class='bx bx-list-plus' ></i>
-                  </button>
-                  <button>
-                    <i class='bx bxs-trash' ></i>
-                  </button>
+                <button class="add-list">
+                    <i class='bx bx-list-plus'></i>
+                </button>
+                <button class="delete-btn">
+                    <i class='bx bxs-trash'></i>
+                </button>
             </div>
         </article>
 
         <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Arthur-Japin/Wat-stilte-wil-roman/Boek/?itemid=%7Coba-catalogus%7C1259690"><img src="./images/books/boek11.jpeg" alt="Uitleenpagina"></a>
+            <a
+                href="https://zoeken.oba.nl/detail/Arthur-Japin/Wat-stilte-wil-roman/Boek/?itemid=%7Coba-catalogus%7C1259690"><img
+                    src="./images/books/boek11.jpeg" alt="Uitleenpagina"></a>
             <h2>Wat stilte wil</h2>
-            <a href="#popup5-auteur"><p>Arthur Japin</p></a>
+            <a href="#popup5-auteur">
+                <p>Arthur Japin</p>
+            </a>
             <div class="list-btn">
-                <button>
-                    <i class='bx bx-list-plus' ></i>
-                  </button>
-                  <button>
-                    <i class='bx bxs-trash' ></i>
-                  </button>
+                <button class="add-list">
+                    <i class='bx bx-list-plus'></i>
+                </button>
+                <button class="delete-btn">
+                    <i class='bx bxs-trash'></i>
+                </button>
             </div>
         </article>
 
         <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Anya-Niewierra/De-Camino/Boek/?itemid=%7Coba-catalogus%7C1242337"><img src="./images/books/boek12.jpg" alt="Uitleenpagina"></a>
+            <a href="https://zoeken.oba.nl/detail/Anya-Niewierra/De-Camino/Boek/?itemid=%7Coba-catalogus%7C1242337"><img
+                    src="./images/books/boek12.jpg" alt="Uitleenpagina"></a>
             <h2>De Camino</h2>
-            <a href="#popup6-auteur"><p>Anya Niewierra</p></a>
+            <a href="#popup6-auteur">
+                <p>Anya Niewierra</p>
+            </a>
             <div class="list-btn">
-                <button>
-                    <i class='bx bx-list-plus' ></i>
-                  </button>
-                  <button>
-                    <i class='bx bxs-trash' ></i>
-                  </button>
+                <button class="add-list">
+                    <i class='bx bx-list-plus'></i>
+                </button>
+                <button class="delete-btn">
+                    <i class='bx bxs-trash'></i>
+                </button>
             </div>
         </article>
     </section>
@@ -218,7 +244,7 @@
     <div id="popup1-auteur" class="overlay">
         <div class="popup">
             <h2>Meer van deze auteur</h2>
-            
+
             <ul class="book-recs">
                 <li class="book-small">
                     <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
@@ -257,7 +283,7 @@
     <div id="popup2-auteur" class="overlay">
         <div class="popup">
             <h2>Meer van deze auteur</h2>
-            
+
             <ul class="book-recs">
                 <li class="book-small">
                     <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
@@ -296,7 +322,7 @@
     <div id="popup3-auteur" class="overlay">
         <div class="popup">
             <h2>Meer van deze auteur</h2>
-            
+
             <ul class="book-recs">
                 <li class="book-small">
                     <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
@@ -335,7 +361,7 @@
     <div id="popup4-auteur" class="overlay">
         <div class="popup">
             <h2>Meer van deze auteur</h2>
-            
+
             <ul class="book-recs">
                 <li class="book-small">
                     <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
@@ -374,7 +400,7 @@
     <div id="popup5-auteur" class="overlay">
         <div class="popup">
             <h2>Meer van deze auteur</h2>
-            
+
             <ul class="book-recs">
                 <li class="book-small">
                     <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
@@ -413,7 +439,7 @@
     <div id="popup6-auteur" class="overlay">
         <div class="popup">
             <h2>Meer van deze auteur</h2>
-            
+
             <ul class="book-recs">
                 <li class="book-small">
                     <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>

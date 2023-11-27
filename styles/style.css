@@ -96,7 +96,6 @@ body {
     transform: translateY(0%);
 }
 
-
 /* Navigatie */
 
 nav {
@@ -128,11 +127,11 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 4.5rem;
     min-width: 160px;
     width: 100vw;
     background-color: white;
     height: calc(100dvh - 4.5rem);
-    top: 4.5rem;
     overflow: scroll;
     overflow-x: hidden;
     z-index: 1000;
@@ -285,9 +284,9 @@ body.dark .switch::before {
 /* Main */
 
 main {
-    color: var(--text-color);
     display: flex;
     flex-direction: column;
+    color: var(--text-color);
     margin-top: 4.5rem;
 }
 
@@ -427,13 +426,20 @@ form.list {
     color: var(--text-color);
 }
 
-.book a:nth-child(4) { /* selecteert het 4de child van het article*/
+.book .list-btn a { /* selecteert het 4de child van het article*/
+    display: flex;
+    align-items: center;
     padding: 0.5rem 2rem;
+    margin-right: var(--white-space);
     background: white;
     border-radius: var(--border-radius);
     color: var(--text-color);
     box-shadow: var(--box-shadow-01);
     transition: var(--tran-03);
+}
+
+.book .list-btn .add-list {
+    margin: 0;
 }
 
 /* Add & Delete button */
@@ -443,7 +449,8 @@ form.list {
     width: 100%;
 }
 
-.list-btn button {
+.list-btn .add-list,
+.list-btn .delete-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -454,14 +461,14 @@ form.list {
     transition: var(--tran-03);
 }
 
-.list-btn button:first-of-type {
+.list-btn .add-list {
     margin-right: var(--white-space);
     background: white;
     color: var(--text-color);
     box-shadow: var(--box-shadow-01);
 }
 
-.list-btn button:nth-of-type(2) {
+.list-btn .delete-btn {
     background: transparent;
     color: var(--primary-color);
 }
@@ -645,12 +652,12 @@ body:has(.overlay:target) main {
     display: inline-block;
     padding: 0.4rem 1rem;
     background: white;
-    color: var(--text-color);
     border-radius: var(--border-radius);
     max-width: 80%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: var(--text-color);
     transition: 0.2s ease-in-out;
 }
 
@@ -715,7 +722,7 @@ body:has(.overlay:target) main {
 }
 
 .activity h3 a:active,
-.book a:nth-child(4):active {
+.book .list-btn a:active {
   background: green;
   transition: 0s;
 }
@@ -741,8 +748,8 @@ body:has(.overlay:target) main {
 .activity h3 a:focus,
 .recommendations button:hover,
 .recommendations button:focus,
-.book a:nth-child(4):hover,
-.book a:nth-child(4):focus,
+.book .list-btn a:hover,
+.book .list-btn a:focus,
 .popup button:hover,
 .popup button:focus {
   background: var(--primary-color);
@@ -801,8 +808,8 @@ body.dark .activity h3 a:hover,
 body.dark .activity h3 a:focus,
 body.dark .recommendations button:hover,
 body.dark .recommendations button:focus,
-body.dark .book a:nth-child(4):hover,
-body.dark .book a:nth-child(4):focus {
+body.dark .book .list-btn a:hover,
+body.dark .book .list-btn a:focus {
   background: #EB0000;
   color: white;
 }
@@ -919,6 +926,10 @@ body.dark .overlay {
         padding-left: 1rem;
         margin-bottom: var(--white-space);
         gap: 1rem;
+    }
+
+    .book .list-btn .add-list {
+        margin-right: var(--white-space);
     }
 
     .rec-title {
