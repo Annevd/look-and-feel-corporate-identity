@@ -162,6 +162,7 @@ nav {
     align-items: center;
     margin-right: var(--white-space-02);
     font-size: 1.25rem;
+    color: var(--text-color);
 }
   
 /* Zoekbalk navigatie */
@@ -178,6 +179,7 @@ nav {
 .search-nav input {
     font-size: var(--font-size-standard);
     font-family: AvenirMedium, Arial;
+    color: var(--text-color);
     outline: none;
     border: none;
     background-color: var(--primary-color-light);  
