@@ -960,7 +960,7 @@ body.dark .overlay {
 
     .recommendations h3:first-child {
         grid-column: 6/10;
-        text-align: start;
+        /* text-align: start; */
     }
 
     .activity:first-of-type {
